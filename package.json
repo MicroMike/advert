@@ -15,5 +15,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-redux": "^5.0.7",
     "tcomb-form-native": "^0.6.20"
+  },
+  "devDependencies": {
+    "redux": "^4.0.1"
   }
 }

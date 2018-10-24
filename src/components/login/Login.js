@@ -50,7 +50,7 @@ class Login extends Component {
     const formValues = this.refs.form.getValue()
 
     if (this.state.login) {
-      const url = `http://192.168.13.164:3000/api/login/${formValues.email}/${formValues.password}`
+      const url = `/api/login/${formValues.email}/${formValues.password}`
       cFetch(url)
         .then(response => {
           response.json().then(json => {
@@ -70,7 +70,7 @@ class Login extends Component {
       return
     }
 
-    cFetch('http://192.168.13.164:3000/api/putUser', formValues)
+    cFetch('/api/putUser', formValues)
       .then(response => {
         response.json().then(json => {
           if (json.already) {

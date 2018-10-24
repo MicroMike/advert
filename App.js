@@ -40,24 +40,23 @@ class App extends React.Component {
       container: {
         flex: 1,
         backgroundColor: '#fff',
-        minHeight: Dimensions.get('window').height - this.state.keyboardHeight,
-        justifyContent: 'center',
-        padding: 20
+        height: Dimensions.get('window').height - this.state.keyboardHeight,
+        paddingTop: 26,
+        // justifyContent: 'center',
+      },
+      resizeContainer: {
+        height: Dimensions.get('window').height - this.state.keyboardHeight
       }
     })
 
     return (
       <Provider store={store} >
-        <View style={{
-          height: Dimensions.get('window').height - this.state.keyboardHeight
-        }}>
-          <ScrollView showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="always">
-            <View style={styles.container} >
-              <Router />
-            </View>
-          </ScrollView>
-          <Loading />
-        </View>
+        <ScrollView showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="always" scrollEnabled={!!this.state.keyboardHeight} style={styles.resizeContainer}>
+          <View style={styles.container}>
+            <Router />
+            <Loading />
+          </View>
+        </ScrollView>
       </Provider>
     )
   }

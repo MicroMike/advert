@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "both": "concurrently \"mongod\" \"npm run server\"",
     "server": "babel-node server.js --presets es2015,stage-2",
-    "start": "npm-watch"
+    "start": "npm-watch both"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "concurrently": "^3.6.0",
     "lzutf8": "^0.5.5",

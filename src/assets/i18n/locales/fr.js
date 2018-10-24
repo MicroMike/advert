@@ -20,6 +20,9 @@ export default {
     },
     birthDate: 'Date de naissance'
   },
+  search: {
+    label: 'Recherche'
+  },
   error: {
     required: "Ce champ est obligatoire"
   },

@@ -18,9 +18,9 @@ import router from './routes'
 
 const server = express()
 
+server.use(express.static(path.resolve(__dirname, 'assets')))
 server.use('/api', bodyParser.json())
 server.use('/api', router)
-// server.use(express.static(path.resolve(__dirname, '../.next/static')))
 
 server.listen(port, (err) => {
   if (err) throw err

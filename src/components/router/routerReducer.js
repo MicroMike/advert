@@ -1,8 +1,9 @@
 import Login from 'components/login/Login'
 import Profile from 'components/profile/Profile'
+import Listing from 'components/listing/Listing'
 
 const initialState = {
-  currentComponent: Login
+  currentComponent: Listing
 }
 
 const routerReducer = (state = initialState, action) => {

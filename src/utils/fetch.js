@@ -6,7 +6,7 @@ export default cFetch = (url, body) => {
     store.dispatch(displayLoading())
   }, 500)
 
-  const promise = fetch(url, {
+  const promise = fetch('http://192.168.13.164:3000' + url, {
     method: body ? 'POST' : 'GET',
     headers: {
       Accept: 'application/json',
